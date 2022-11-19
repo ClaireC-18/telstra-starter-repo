@@ -1,8 +1,5 @@
 package au.com.telstra.simcardactivator;
 
-import au.com.telstra.simcardactivator.ActuationResult;
-import au.com.telstra.simcardactivator.SimCardActivator;
-
 import javax.persistence.*;
 
 @Entity

@@ -1,9 +1,5 @@
 package au.com.telstra.simcardactivator;
 
-import au.com.telstra.simcardactivator.ActuationResult;
-import au.com.telstra.simcardactivator.SimCardActivator;
-import au.com.telstra.simcardactivator.SimDBRecord;
-import au.com.telstra.simcardactivator.SimRepository;
 import org.springframework.stereotype.Component;
 
 @Component
