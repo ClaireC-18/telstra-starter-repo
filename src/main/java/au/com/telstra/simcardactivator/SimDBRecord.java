@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class SimDBRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private long id;
+    @Column(name = "simCardId", nullable = false)
+    private Long simCardId;
     @Column(name = "iccid", nullable = false)
     private String iccid;
     @Column(name = "customerEmail", nullable = false)
@@ -22,14 +22,14 @@ public class SimDBRecord {
     public SimDBRecord() {
     }
 
-    public SimDBRecord(SimCardActivator simCard, ActuationResult actuationResult) {
-        this.iccid = simCard.getIccid();
-        this.customerEmail = simCard.getCustomerEmail();
+    public SimDBRecord(SimCardActivator simCardActivator, ActuationResult actuationResult) {
+        this.iccid = simCardActivator.getIccid();
+        this.customerEmail = simCardActivator.getCustomerEmail();
         this.active = actuationResult.getSuccess();
     }
 
-    public long getId() {
-        return id;
+    public long getsimCardId() {
+        return simCardId;
     }
 
     public String getIccid() {
@@ -45,6 +45,6 @@ public class SimDBRecord {
     }
     @Override
     public String toString() {
-        return "SimCard {ID =" + id + ", iccid=" + iccid + ", Customer Email=" + customerEmail + ", Active=" + active + "}";
+        return "SimCard {ID =" + simCardId + ", iccid=" + iccid + ", Customer Email=" + customerEmail + ", Active=" + active + "}";
     }
 }

@@ -13,11 +13,16 @@ public class SimCardActivator {
 
     public SimCardActivator() {
     }
-
     public SimCardActivator(String iccid, String customerEmail, boolean active) {
         this.iccid = iccid;
         this.customerEmail = customerEmail;
         this.active = active;
+    }
+
+    public SimCardActivator(SimDBRecord simDBRecord) {
+        this.iccid = simDBRecord.getIccid();
+        this.customerEmail = simDBRecord.getCustomerEmail();
+        this.active = simDBRecord.getActive();
     }
 
     public String getIccid() {
